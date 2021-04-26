@@ -13,52 +13,8 @@
 }
 </style>
 <body>
-<div id="mydiv" onmouseover="increase()" onmouseout="decrease()">MCST Map Time</div>
-<script type="text/javascript">
-		
-		var width=100;
-		var difference=2;
-		var interveralID =0;
-		function increase()
-		{
-			clearInterval(interveralID);
-			interveralID=setInterval(expand,10);
-		}
-		function decrease()
-		{
-			clearInterval(interveralID);
-			interveralID=setInterval(shrink,10);
-		}
-		function expand()
-		{
-			if(width<200)
-			{
-				width = width+difference;
-				document.getElementById("mydiv").style.width=width;
-				console.log(width);
-			}
-			else
-			{
-				clearInterval(interveralID);
-			}
-			
-		}
-		function shrink()
-		{
-			if(width>100)
-			{
-				width = width-difference;
-				document.getElementById("mydiv").style.width=width;
-				console.log(width);
-			}
-			else
-			{
-				clearInterval(interveralID);
-			}
-			
-		}
-	
-</script>
+<div id="mydiv">MCST Map Time</div>
+
 <script>
 
 dragElement(document.getElementById("mydiv"));
